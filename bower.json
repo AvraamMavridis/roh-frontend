@@ -1,0 +1,24 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "homepage": "https://github.com/AvraamMavridis/rohhdiseon",
+  "authors": [
+    "AvraamMavridis <avr.mav@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-material-design": "~0.3.0",
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4",
+    "react": "~0.13.3",
+    "js-cookie": "~1.5.1"
+  }
+}
