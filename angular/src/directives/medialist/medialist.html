@@ -1,0 +1,7 @@
+<ul class="list-group">
+  <li class="list-group-item col-md-6"
+      ng-repeat="item in listOfNews track by $index"
+      ng-class="(($index - 2) % 3) == 0 ? 'media-item-right' : (($index % 3) == 0 ? 'media-item-left' : 'media-item-big')">
+    <mediaobject item="item" index="$index"></mediaobject>
+  </li>
+</ul>

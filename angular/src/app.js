@@ -1,2 +1,13 @@
 'use strict';
-var rohapp = angular.module('rohapp', []);
+var rohapp = angular.module('rohapp', ['ngRoute']);
+var NavBar = require('./directives/navbar/navbar');
+var MediaList = require('./directives/medialist/medialist');
+var MediaObject = require('./directives/mediaobject/mediaobject');
+var RouteConfig = require('./routes');
+var socketIOService = require('./services/socketIOService');
+rohapp.config(['$routeProvider', RouteConfig]);
+rohapp.service('socketIOService', socketIOService);
+rohapp.directive('navbar', [NavBar]);
+rohapp.directive('mediaobject', [MediaObject]);
+rohapp.directive('medialist', ['socketIOService', MediaList]);
+module.exports = rohapp;

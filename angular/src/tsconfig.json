@@ -16,6 +16,10 @@
     ],
     "files": [
         "./app.ts",
-        "./navbar/navbar.ts"
+        "./directives/medialist/medialist.ts",
+        "./directives/mediaobject/mediaobject.ts",
+        "./directives/navbar/navbar.ts",
+        "./routes.ts",
+        "./services/socketIOService.ts"
     ]
 }

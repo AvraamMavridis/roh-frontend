@@ -1,5 +1,7 @@
 @import "variables";
 @import "imports";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400&subset=greek,latin);
+@import 'compass/css3/filter';
 
 body {
   text-align: center;
@@ -20,3 +22,56 @@ a, a:visited {
   text-decoration: none;
 }
 
+
+.list-group-item {
+  padding: 0px;
+  height: 240px;
+  background-color: $color-main-white;
+
+  &:hover{
+    background-color: $color-secondary-white;
+  }
+}
+
+.media{
+  height: 240px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-color: $color-main-red;
+  background-position: center;
+
+  &:hover{
+    background-blend-mode: lighten;
+  }
+}
+
+
+.media-body, .media-image{
+  height: 240px;
+  text-align: left;
+}
+
+.media-image{
+  background-size: cover;
+}
+
+.media-heading{
+  color: #3B3C1D;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: #FAF312;
+  display: inline-block;
+  max-width: 400px;
+  padding: 5px;
+  font-weight: 700;
+}
+
+.media-time{
+  background-color: $color-main-grey;
+  color: $color-main-white;
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 0px 0px 5px;
+  border-radius: 0px 0px 10px;
+}

@@ -12,8 +12,8 @@ global.config = {
       scripts: SRC_FOLDER + '/modules/**/*.ts',
       styles: SRC_FOLDER + '/styles/app.scss',
       stylesGlob: SRC_FOLDER + '/styles/**/*.scss',
-      templates: SRC_FOLDER + '/modules/**/*.html',
-      templatesHTML: SRC_FOLDER + '/modules/**/*.html',
+      templates: SRC_FOLDER + '/**/*.html',
+      templatesHTML: SRC_FOLDER + '/**/*.html',
       templatesCompiled: TMP_FOLDER,
       livereload: [BUILD_FOLDER + '/**/*', '!' + BUILD_FOLDER + '/assets/**/*'],
       modules: './' + SRC_FOLDER + '/app.ts'
