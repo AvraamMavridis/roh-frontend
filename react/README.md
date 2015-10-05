@@ -1,2 +1,0 @@
-# roh-frontend
-React + Reflux
