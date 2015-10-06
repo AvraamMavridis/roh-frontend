@@ -3,6 +3,13 @@ var path = require('path');
 var port = 8000;
 var srcPath = path.join(__dirname, '/../src');
 var publicPath = '/assets/';
+var svgoConfig = JSON.stringify({
+  plugins: [
+    {removeTitle: true},
+    {convertColors: {shorthex: false}},
+    {convertPathData: false}
+  ]
+});
 
 module.exports = {
   port: port,
@@ -39,6 +46,8 @@ module.exports = {
       }
     ],
     loaders: [
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
       {
         test: /\.jsx?$/,
         loaders: ['react-hot', 'jsx?harmony'],
@@ -67,7 +76,14 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|woff|woff2)$/,
         loader: 'url-loader?limit=8192'
-      }
+      },
+      {
+        test: /.*\.svg$/,
+        loaders: [
+          'file-loader',
+          'svgo-loader?' + svgoConfig
+        ]
+      },
     ]
   }
 };

@@ -1,19 +1,22 @@
 require('normalize.css');
-require('styles/App.css');
+require("font-awesome-webpack");
+require('bootstrap/dist/css/bootstrap.css');
+require('styles/App.scss');
 
 import React from 'react/addons';
 
-let yeomanImage = require('../images/yeoman.png');
+let Article = require('./Article/Article');
 
 class AppComponent extends React.Component {
   render() {
     return (
-      <div className="index">
-        Hello world
-      </div>
+      <span className="something">
+        <Article/>
+      </span>
     );
   }
 }
+
 
 AppComponent.defaultProps = {
 };
