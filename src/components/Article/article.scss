@@ -1,6 +1,25 @@
+@import '../../styles/vars.scss';
+
 .article{
-  color: red;
+  border: 1px solid #E3F2FD;
   header{
-    background-color: white;
+    background-color: $main-background-color;
+    font-size: $base-size-greater;
+    margin-top: 10px;
+    line-height: $base-size-greater;
+  }
+
+  p{
+    margin: 10px 0px 10px 0px;
+  }
+
+  .article-image{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px 5px 0px 0px;
   }
 }

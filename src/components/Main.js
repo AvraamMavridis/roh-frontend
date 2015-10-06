@@ -10,9 +10,9 @@ let Article = require('./Article/Article');
 class AppComponent extends React.Component {
   render() {
     return (
-      <span className="something">
+      <div className="container-fluid">
         <Article/>
-      </span>
+      </div>
     );
   }
 }

@@ -4,4 +4,19 @@
 body {
   color: $main-text-color;
   background: $main-background-color;
+  font-size: $base-size;
+
+  header{
+    font-size: $base-size-greater;
+    color: inherit;
+  }
+
+  p{
+    font-size: 13px;
+    color: inherit;
+  }
+
+  .no-padding{
+    padding: 0px !important;
+  }
 }
