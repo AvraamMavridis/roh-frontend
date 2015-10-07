@@ -8,15 +8,24 @@ require('./article.scss')
 
 var Image = React.createClass({
 
+  /**
+   * Returns the image style of the article
+   * @return {object}
+   */
   getImageStyle: function(){
     return{
       backgroundImage: 'url(' + this.props.article.image + ')',
     }
   },
 
+  /**
+   * Returns the hour that the article was published in a human readable format
+   * @return {string}
+   */
   getDate: function(){
     let time = new Date(this.props.article.moment.replace(/"/g, ''));
-    return `Δημοσιεύθηκε στις ${time.getHours()}:${time.getMinutes()}`;
+    let minutes = (time.getMinutes()  <10 ? '0': '') + time.getMinutes();
+    return `Δημοσιεύθηκε στις ${time.getHours()}:${minutes}`;
   },
 
   render: function(){
