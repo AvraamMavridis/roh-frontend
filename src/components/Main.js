@@ -22,8 +22,8 @@ var AppComponent = React.createClass({
   },
 
   render: function() {
-    let arts = _.map(this.state.listOfImages, function(){return(
-      <Article key={Math.random()}/>
+    let arts = _.map(this.state.articles, function(article){return(
+      <Article article={article} key={Math.random()}/>
     )});
     return (
       <div className="container-fluid">
