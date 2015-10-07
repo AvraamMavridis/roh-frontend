@@ -20,7 +20,6 @@ var Image = React.createClass({
   },
 
   render: function(){
-    console.log(this.props);
     return(
       <div className="col-xs-10 col-xs-offset-1 article">
         <header className="col-xs-12 no-padding">{ this.props.article.title }</header>

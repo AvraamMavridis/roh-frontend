@@ -1,8 +1,14 @@
 @import '../../styles/vars.scss';
 
+.articles-container{
+  width: 85%;
+  margin-left: 15%;
+}
+
 .article{
-  border: 1px solid #E0E0E0;
-  margin: 10px 0px;
+  border: 1px solid $border-color;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding: 5px 20px 15px 20px;
   background-color: $main-background-color;
   header{
@@ -12,6 +18,7 @@
 
   p{
     margin: 10px 0px 10px 0px;
+    padding-top: 25px;
   }
 
   .article-image{
@@ -22,5 +29,11 @@
     background-position: center;
     background-repeat: no-repeat;
     margin: 5px 5px 0px 0px;
+  }
+
+  .article-details{
+    position: absolute;
+    bottom: 10px;
+    left: 130px;
   }
 }

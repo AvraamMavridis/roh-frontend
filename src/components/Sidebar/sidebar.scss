@@ -1,0 +1,11 @@
+@import '../../styles/vars.scss';
+
+.sidebar{
+  position: fixed;
+  height: 100%;
+  background-color: #82B1FF;
+  border-right: 1px solid $border-color;
+  top: 0px;
+  left: 0px;
+  width: 15%;
+}

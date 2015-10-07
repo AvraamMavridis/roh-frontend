@@ -10,6 +10,7 @@ import React from 'react/addons';
 let Reflux = require('reflux');
 let _ = require('lodash');
 let Article = require('./Article/Article');
+let Sidebar = require('./Sidebar/Sidebar');
 let ArticleActions = require('../actions/ArticlesActions.js');
 let ArticlesStore = require('../stores/ArticlesStore.js');
 
@@ -27,7 +28,10 @@ var AppComponent = React.createClass({
     )});
     return (
       <div className="container-fluid">
-        {arts}
+        <Sidebar/>
+        <div className="articles-container">
+          {arts}
+        </div>
       </div>
     );
   }
