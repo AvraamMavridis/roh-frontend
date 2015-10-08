@@ -7,7 +7,6 @@ let config = require('../components/config.js');
 
 var ImageStore = Reflux.createStore({
     listenables: [ArticlesActions],
-    imagelist: [],
 
     /*
     This is triggered when the action fetchImages is called
