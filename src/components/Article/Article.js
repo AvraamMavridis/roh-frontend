@@ -1,8 +1,7 @@
 'use strict';
 
-import React from 'react/addons';
-
-
+let React = require('react');
+let Comments = require('../Comments/Comments.jsx');
 
 require('./article.scss')
 
@@ -30,11 +29,13 @@ var Image = React.createClass({
 
   render: function(){
     return(
-      <div className="col-xs-10 col-xs-offset-1 article">
+      <div className="col-xs-10 col-xs-offset-1 container article">
         <header className="col-xs-12 no-padding">{ this.props.article.title }</header>
-        <div className="article-image" style={this.getImageStyle()}></div>
-        <p>{this.props.article.description} </p>
-        <p className="article-details">{this.getDate()} από {this.props.article.source}</p>
+        <div className="col-xs-12">
+          <div className="article-image" style={this.getImageStyle()}></div>
+          <p>{this.props.article.description} </p>
+        </div>
+        <Comments/>
       </div>
     )
   }
