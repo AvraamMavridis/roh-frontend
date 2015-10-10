@@ -6,6 +6,10 @@ body {
   background-color: rgb(233, 234, 237);
   font-size: $base-size;
 
+  .clickable{
+    cursor: pointer;
+  }
+
   header{
     font-size: $base-size-greater;
     color: inherit;
